@@ -1,0 +1,15 @@
+# Build artifacts
+*.o
+*.a
+libft/libft.a
+ft_printf/libftprintf.a
+get_next_line/get_next_line.a
+push_swap/push_swap
+
+# macOS
+.DS_Store
+
+# Editor files
+*.swp
+*.swo
+*~
