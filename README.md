@@ -11,7 +11,7 @@ Each project lives in its own directory with its own build/run instructions and 
 | Project | Language | What it covers | Status |
 |--------|----------|----------------|--------|
 | `libft` | C | Custom standard-library functions, linked lists, fundamentals | ✅ done |
-| `born2beroot` | LINUX | Virtualisation, SSH, UFW, cron | ✅ done |
+| `born2beroot` | LINUX | Virtualisation, SSH, UFW, Cron | ✅ done |
 | `ft_printf` | C | Variadic functions, formatting, output handling | ✅ done |
 | `get_next_line` | C | Buffered file reading, static storage, memory discipline | ✅ done |
 | `push_swap` | C | Algorithms, constraints-based sorting with stacks | ⏳ in progress |
