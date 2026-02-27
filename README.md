@@ -6,7 +6,7 @@ Each project lives in its own directory with its own build/run instructions and 
 
 ---
 
-## Projects (so far)
+## Projects
 
 | Project | Language | What it covers | Status |
 |--------|----------|----------------|--------|
