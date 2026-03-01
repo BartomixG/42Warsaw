@@ -35,9 +35,9 @@ EMPTY
 0 --> 00
 2 --> 10
 
-# Then, look at the least significant bits. For 001 the least significant bit equals 1 so we roll up the stack and the first element becomes the last one
+# Then, look at the least significant bits. For 01 the least significant bit equals 1 so we roll up the stack and the first element becomes the last one
 
-001 --> 1 ==> ra(stack_a);
+01 --> 1 ==> ra(stack_a);
 
 # Current stack structure
 stack_a				
@@ -49,9 +49,9 @@ Value 2; Position 1 (01)
 stack_b
 EMPTY
 
-# Let's move to the next number. For 011 the least significant bit equals 1 so we do the roll up too.
+# Let's move to the next number. For 11 the least significant bit equals 1 so we do the roll up too.
 
-011 --> 1 ==> ra(stack_a);
+11 --> 1 ==> ra(stack_a);
 
 # Current stack structure
 stack_a
@@ -174,7 +174,7 @@ If you want to check whether the stack is sorted, you can paste the following co
 ```C
 while (stack_a != NULL)
 {
-	ft_printf(": %i position: %i\n", stack_a->value, stack_a->position);
+	ft_printf("value: %i position: %i\n", stack_a->value, stack_a->position);
 	stack_a = stack_a->next;
 }
 ```

@@ -25,7 +25,7 @@ void	ft_radix(t_stack **stack_a, t_stack **stack_b)
 	while (bit < bits)
 	{
 		if (ft_issorted(*stack_a))
-			break ;
+			return ;
 		i = 0;
 		while (i++ < n)
 		{
@@ -53,10 +53,19 @@ int	main(int argc, char **argv)
 	if (argc == 2)
 	{
 		read = ft_split(argv[1], ' ');
+		if (ft_argcgen(read) < 2)
+			return (ft_freesplit(read), argc);
 		stack_a = get_stack(ft_argcgen(read), read);
 	}
 	else
 		stack_a = get_stack(argc, argv);
+	if (!stack_a)
+		return (ft_freesplit(read), argc);
+	while (stack_a != NULL)
+	{
+		ft_printf("value: %i position: %i\n", stack_a->value, stack_a->position);
+		stack_a = stack_a->next;
+	}
 	ft_radix(&stack_a, &stack_b);
 	head = stack_a;
 	if (read)

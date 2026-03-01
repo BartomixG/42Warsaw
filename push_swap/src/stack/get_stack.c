@@ -49,7 +49,7 @@ static int	ft_position(char **argv, int index, int argc)
 	nb = atoi(argv[index]);
 	if (argc < 2)
 		return (-1);
-	while (i < argc)
+	while (i < argc)	
 	{
 		if (nb > atoi(argv[i++]))
 			position++;

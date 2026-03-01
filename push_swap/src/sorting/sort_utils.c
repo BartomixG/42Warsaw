@@ -39,10 +39,10 @@ int	ft_issorted(t_stack *stack)
 	t_stack	*current;
 	t_stack	*further;
 
-	if (stack->position != 1)
+	if (stack->position != 0)
 		return (0);
 	current = stack;
-	further = stack ->next;
+	further = stack->next;
 	while (further)
 	{
 		if (current->position + 1 != further->position)
