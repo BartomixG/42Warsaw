@@ -44,7 +44,9 @@ static int	ft_position(char **argv, int index, int argc)
 	int	position;
 	int	i;
 
-	i = 1;
+	i = 0;
+	if (ft_isdigit(argv[0][0]) == 0 && argv[0][0] != '-')
+		i++;
 	position = 0;
 	nb = atoi(argv[index]);
 	if (argc < 2)

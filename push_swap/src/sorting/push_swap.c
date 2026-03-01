@@ -12,6 +12,17 @@
 
 #include "../../include/push_swap.h"
 
+static int	ft_iserror(char **arr)
+{
+	if (ft_argcgen(arr) < 2)
+	{
+		if (!ft_isint(arr[0]))
+			ft_printf("Error\n");
+		return (1);
+	}
+	return (0);
+}
+
 void	ft_radix(t_stack **stack_a, t_stack **stack_b)
 {
 	int	bit;
@@ -45,7 +56,6 @@ int	main(int argc, char **argv)
 	char	**read;
 	t_stack	*stack_a;
 	t_stack	*stack_b;
-	t_stack	*head;
 
 	read = NULL;
 	stack_a = NULL;
@@ -53,23 +63,14 @@ int	main(int argc, char **argv)
 	if (argc == 2)
 	{
 		read = ft_split(argv[1], ' ');
-		if (ft_argcgen(read) < 2)
+		if (ft_iserror(read))
 			return (ft_freesplit(read), argc);
 		stack_a = get_stack(ft_argcgen(read), read);
+		ft_freesplit(read);
 	}
 	else
 		stack_a = get_stack(argc, argv);
-	if (!stack_a)
-		return (ft_freesplit(read), argc);
-	while (stack_a != NULL)
-	{
-		ft_printf("value: %i position: %i\n", stack_a->value, stack_a->position);
-		stack_a = stack_a->next;
-	}
 	ft_radix(&stack_a, &stack_b);
-	head = stack_a;
-	if (read)
-		ft_freesplit(read);
-	ft_stackclear(&head);
+	ft_stackclear(&stack_a);
 	return (argc);
 }
