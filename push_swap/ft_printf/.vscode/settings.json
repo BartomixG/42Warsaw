@@ -1,0 +1,8 @@
+{
+	"42header.email": "bgorski@student.42warsaw.pl",
+	"42header.username": "bgorski",
+	"files.associations": {
+		"ft_printf.h": "c",
+		"libftprintf.h": "c"
+	}
+}
