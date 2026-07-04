@@ -6,7 +6,7 @@
 /*   By: bgorski <bgorski@student.42warsaw.pl>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/21 20:22:33 by bgorski           #+#    #+#             */
-/*   Updated: 2026/02/27 01:31:49 by bgorski          ###   ########.fr       */
+/*   Updated: 2026/07/04 16:06:51 by bgorski          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,23 @@ void	ft_radix(t_stack **stack_a, t_stack **stack_b)
 	}
 }
 
+void	ft_scenario(t_stack **stack_a, t_stack **stack_b)
+{
+	int	size;
+
+	size = ft_stacksize(*stack_a);
+	if (ft_issorted(*stack_a))
+		return ;
+	if (size == 2)
+		sa(stack_a);
+	else if (size == 3)
+		sort_3(stack_a);
+	else if (size <= 5)
+		sort_5(stack_a, stack_b);
+	else
+		ft_radix(stack_a, stack_b);
+}
+
 int	main(int argc, char **argv)
 {
 	char	**read;
@@ -70,7 +87,7 @@ int	main(int argc, char **argv)
 	}
 	else
 		stack_a = get_stack(argc, argv);
-	ft_radix(&stack_a, &stack_b);
+	ft_scenario(&stack_a, &stack_b);
 	ft_stackclear(&stack_a);
-	return (argc);
+	return (0);
 }

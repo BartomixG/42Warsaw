@@ -13,9 +13,12 @@ PRINTF = ft_printf/libftprintf.a
 SRCS = 	\
 src/sorting/push_swap.c\
 src/sorting/sort_utils.c\
+src/sorting/sort_3.c\
+src/sorting/sort_5.c\
 src/stack/get_stack.c\
 src/stack/push_operation.c\
 src/stack/rotate_operation.c\
+src/stack/swap_operation.c\
 src/stack/stack_utils.c\
 src/stack/str_arr.c
 
@@ -37,3 +40,5 @@ clean :
 	make clean -C ft_printf
 
 re : fclean all
+
+.PHONY: all clean fclean re

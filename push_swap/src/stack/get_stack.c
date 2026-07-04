@@ -6,7 +6,7 @@
 /*   By: bgorski <bgorski@student.42warsaw.pl>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/26 21:55:36 by bgorski           #+#    #+#             */
-/*   Updated: 2026/02/26 21:57:21 by bgorski          ###   ########.fr       */
+/*   Updated: 2026/07/04 15:36:08 by bgorski          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ static int	ft_position(char **argv, int index, int argc)
 	nb = atoi(argv[index]);
 	if (argc < 2)
 		return (-1);
-	while (i < argc)	
+	while (i < argc)
 	{
 		if (nb > atoi(argv[i++]))
 			position++;
