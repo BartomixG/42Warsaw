@@ -14,7 +14,7 @@ SRCS = 	\
 src/sorting/push_swap.c\
 src/sorting/sort_utils.c\
 src/sorting/sort_3.c\
-src/sorting/sort_5.c\
+src/sorting/sort_45.c\
 src/stack/get_stack.c\
 src/stack/push_operation.c\
 src/stack/rotate_operation.c\
@@ -22,7 +22,7 @@ src/stack/swap_operation.c\
 src/stack/stack_utils.c\
 src/stack/str_arr.c
 
-$(NAME) :
+$(NAME) : $(SRCS)
 	make -C libft
 	make -C ft_printf
 	cc $(CFLAGS) $(SRCS) $(LIBFT) $(PRINTF) -o $(NAME)

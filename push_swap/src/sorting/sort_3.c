@@ -6,7 +6,7 @@
 /*   By: bgorski <bgorski@student.42warsaw.pl>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/04 15:16:56 by bgorski           #+#    #+#             */
-/*   Updated: 2026/07/04 16:07:47 by bgorski          ###   ########.fr       */
+/*   Updated: 2026/07/04 18:07:47 by bgorski          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,22 +44,27 @@ void	rra(t_stack **stack_a)
 
 void	sort_3(t_stack **stack_a)
 {
-	int	first;
-	int	second;
-	int	third;
+	int	x;
+	int	y;
+	int	z;
 
-	first = (*stack_a)->position;
-	second = (*stack_a)->next->position;
-	third = (*stack_a)->next->next->position;
-	if (first > second && second < third && first < third)
+	x = (*stack_a)->position;
+	y = (*stack_a)->next->position;
+	z = (*stack_a)->next->next->position;
+	if (y < x && y < z && x < z)
 		sa(stack_a);
-	else if (first > second && second > third && first > third)
+	else if (y > x && y > z && x < z)
 	{
-		sa(stack_a);
 		rra(stack_a);
-	}
-	else if (first > second && second < third && first > third)
-		ra(stack_a);
-	else if (first < second && second > third && first < third)
 		sa(stack_a);
+	}
+	else if (y > x && y > z && x > z)
+		rra(stack_a);
+	else if (y < x && y > z && x > z)
+	{
+		ra(stack_a);
+		sa(stack_a);
+	}
+	else if (y < x && y < z && x > z)
+		ra(stack_a);
 }

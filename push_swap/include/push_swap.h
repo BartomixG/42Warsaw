@@ -6,7 +6,7 @@
 /*   By: bgorski <bgorski@student.42warsaw.pl>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 23:51:47 by bgorski           #+#    #+#             */
-/*   Updated: 2026/07/04 15:53:36 by bgorski          ###   ########.fr       */
+/*   Updated: 2026/07/04 17:56:34 by bgorski          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ void	ra(t_stack **a);
 int		ft_howmanybits(t_stack *stack);
 void	ft_freesplit(char **arr);
 void	sort_3(t_stack **stack_a);
+void	sort_4(t_stack **stack_a, t_stack **stack_b);
 void	sort_5(t_stack **stack_a, t_stack **stack_b);
 
 #endif
