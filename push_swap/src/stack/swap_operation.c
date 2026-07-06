@@ -24,7 +24,7 @@ int	swap(t_stack **stack)
 	head = *stack;
 	next = head->next;
 	if (!head && !next)
-		ft_printf("Error\n");
+		write(2, "Error\n", 6);
 	tmp_val = head->value;
 	tmp_position = head->position;
 	head->value = next->value;
@@ -37,13 +37,13 @@ int	swap(t_stack **stack)
 void	sa(t_stack **stack_a)
 {
 	if (swap(stack_a) == -1)
-		ft_printf("Error\n");
+		write(2, "Error\n", 6);
 	ft_printf("sa\n");
 }
 
 void	sb(t_stack **stack_b)
 {
 	if (swap(stack_b) == -1)
-		ft_printf("Error\n");
+		write(2, "Error\n", 6);
 	ft_printf("sb\n");
 }

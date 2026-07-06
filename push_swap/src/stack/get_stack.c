@@ -93,7 +93,7 @@ t_stack	*get_stack(int argc, char **argv)
 		{
 			free(tmp);
 			ft_stackclear(&stack_a);
-			ft_printf("Error\n");
+			write(2, "Error\n", 6);
 			return (NULL);
 		}
 		ft_stackadd_back(&stack_a, tmp);

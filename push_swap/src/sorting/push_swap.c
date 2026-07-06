@@ -11,13 +11,14 @@
 /* ************************************************************************** */
 
 #include "../../include/push_swap.h"
+#include <unistd.h>
 
 static int	ft_iserror(char **arr)
 {
 	if (ft_argcgen(arr) < 2)
 	{
 		if (!ft_isint(arr[0]))
-			ft_printf("Error\n");
+			write(2, "Error\n", 6);
 		return (1);
 	}
 	return (0);
