@@ -14,4 +14,4 @@ Each project lives in its own directory with its own build/run instructions and 
 | `born2beroot` | LINUX | Virtualisation, SSH, UFW, Cron | ✅ done |
 | `ft_printf` | C | Variadic functions, formatting, output handling | ✅ done |
 | `get_next_line` | C | Buffered file reading, static storage, memory discipline | ✅ done |
-| `push_swap` | C | Algorithms, constraints-based sorting with stacks | ⏳ in progress |
+| `push_swap` | C | Algorithms, constraints-based sorting with stacks | ✅ done |
